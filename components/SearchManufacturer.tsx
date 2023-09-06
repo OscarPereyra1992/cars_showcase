@@ -29,12 +29,12 @@ const SearchManufacturer = ({
               src="/car-logo.svg"
               width={20}
               height={20}
-              className='ml-4'
+              className="ml-4"
               alt="Car logo"
             />
           </Combobox.Button>
           <Combobox.Input
-            className='search-manufacturer__input'
+            className="search-manufacturer__input"
             placeholder="Volkswagen"
             displayValue={(item: string) => item}
             onChange={(e) => setQuery(e.target.value)}
@@ -46,9 +46,10 @@ const SearchManufacturer = ({
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
           >
-            <Combobox.Options  
-            className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
-              static>
+            <Combobox.Options
+              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+              static
+            >
               {filteredManufacturers.map((item) => (
                 <Combobox.Option
                   key={item}
@@ -69,7 +70,6 @@ const SearchManufacturer = ({
                         {item}
                       </span>
 
-                      {/* Show an active blue background color if the option is selected */}
                       {selected ? (
                         <span
                           className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
